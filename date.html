@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div class="container">
+    </div>
+    <script>
+    var date = new Date("1992","08","16");
+    document.write(formatDate(date));
+
+    function formatDate(date) {
+        var year = date.getFullYear();
+        var month = date.getMonth();
+
+        function getMonthName(month) {
+            var monthNames = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+            return monthNames[month];
+        }
+
+        var day = date.getDate();
+        if (day < 10) {
+            day = "0" + day;
+        }
+
+        return day + " " + getMonthName(month) + " " + year;
+    }
+
+
+
+
+    </script>
+
+
+    </body> 
+    </html >
